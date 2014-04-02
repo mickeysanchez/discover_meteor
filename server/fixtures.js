@@ -54,4 +54,15 @@ if (Posts.find().count() === 0) {
     submitted: now - 12 * 3600 * 1000,
 	commentsCount: 0
   });
-}
+  
+  for (var i = 0; i < 10; i++) {
+	  Posts.insert({
+		  title: 'Test post #' + i,
+		  author: sacha.profile.name,
+		  userId: sacha._id,
+		  url: i,
+		  submitted: now-1 * 3600 * 1000,
+		  commentsCount: 0
+	  });
+  };
+};
